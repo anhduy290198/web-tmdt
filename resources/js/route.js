@@ -1,11 +1,8 @@
 // Views
-import Vue from 'vue'
 import {createRouter, createWebHistory} from 'vue-router';
 
-Vue.component('home', require('./Layout/main.vue').default);
-
-Vue.use(VueRouter);
-
+import Home from './Layout/main.vue';
+import Test from './Layout/test.vue';
 
 const PREFIX_ROUTE = "/";
 
@@ -14,6 +11,11 @@ const routes = [
         path: PREFIX_ROUTE + 'home',
         name: 'Home',
         component: Home
+    },
+    {
+        path: PREFIX_ROUTE + 'test',
+        name: 'Test',
+        component: Test
     },
 ];
 
